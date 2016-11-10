@@ -1,0 +1,27 @@
+.checkboxes {
+    width:            23.2em;
+    height:           15em;
+    border:           solid 1px #c0c0c0;
+    overflow:         auto;
+}
+
+.checkboxes label {
+    display:          block;
+}
+
+.multiselect-on {
+    background-color: #6e9033;
+}
+
+.multiselect-on label, .allselect label {
+    color:            #ffffff;
+}
+
+.checkboxes input {
+    float:            left;
+}
+
+.allselect {
+    background-color: #6e9033;
+    opacity:          0.5;
+}

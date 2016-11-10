@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magecom
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to info@magecom.net so we can send you a copy immediately.
+ *
+ * @category Magecom
+ * @package Magecom_PriceUpdateManager
+ * @copyright Copyright (c) 2015 Magecom, Inc. (http://www.magecom.net)
+ * @license  http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Magecom_PriceUpdateManager>
+            <version>1.0.0</version>
+        </Magecom_PriceUpdateManager>
+    </modules>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Magecom_PriceUpdateManager before="Mage_Adminhtml">Magecom_PriceUpdateManager_Adminhtml</Magecom_PriceUpdateManager>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <global>
+        <models>
+            <priceupdatemanager>
+                <class>Magecom_PriceUpdateManager_Model</class>
+            </priceupdatemanager>
+        </models>
+        <blocks>
+            <priceupdatemanager>
+                <class>Magecom_PriceUpdateManager_Block</class>
+            </priceupdatemanager>
+        </blocks>
+        <helpers>
+            <priceupdatemanager>
+                <class>Magecom_PriceUpdateManager_Helper</class>
+            </priceupdatemanager>
+        </helpers>
+        <events>
+            <magecom_priceupdate_clearcache_after>
+                <observers>
+                    <magecom_priceupdate_clearcache_after>
+                        <type>singleton</type>
+                        <class>Magecom_PriceUpdateManager_Model_Observer</class>
+                        <method>clearCache</method>
+                    </magecom_priceupdate_clearcache_after>
+                </observers>
+            </magecom_priceupdate_clearcache_after>
+            <magecom_priceupdate_reindex_after>
+                <observers>
+                    <magecom_priceupdate_reindex_after>
+                        <type>singleton</type>
+                        <class>Magecom_PriceUpdateManager_Model_Observer</class>
+                        <method>reindexPrice</method>
+                    </magecom_priceupdate_reindex_after>
+                </observers>
+            </magecom_priceupdate_reindex_after>
+        </events>
+    </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <cms>
+                    <file>magecom/priceupdatemanager.xml</file>
+                </cms>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <priceupdatemanager>
+                    <files>
+                        <default>Magecom_PriceUpdateManager.csv</default>
+                    </files>
+                </priceupdatemanager>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <magecom_priceupdatemanager>
+            <general>
+                <clean_cache>1</clean_cache>
+                <reindex>1</reindex>
+                <attrubute_code>manufacturer</attrubute_code>
+            </general>
+        </magecom_priceupdatemanager>
+    </default>
+</config>
