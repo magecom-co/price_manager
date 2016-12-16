@@ -28,7 +28,7 @@
     </tabs>
     <sections>
         <magecom_priceupdatemanager module="priceupdatemanager" translate="label">
-            <label>Price update manager</label>
+            <label>Mass Price Update</label>
             <sort_order>200</sort_order>
             <show_in_default>1</show_in_default>
             <show_in_website>1</show_in_website>

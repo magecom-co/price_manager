@@ -100,12 +100,12 @@ class Magecom_PriceUpdateManager_Block_Adminhtml_Update_Form extends Mage_Adminh
         $fieldset->addField('action_type', 'select',
             array(
                 'name'      => 'action_type',
-                'label'     => $helper->__('Apply'),
-                'title'     => $helper->__('Apply'),
+                'label'     => $helper->__('Change Price By'),
+                'title'     => $helper->__('Change Price By'),
                 'required'  => true,
                 'values'    => array(
-                    Magecom_PriceUpdateManager_Model_Priceupdate::UPDATE_ACTION_TYPE_BY_PERCENT => $helper->__('Percent of product price'),
-                    Magecom_PriceUpdateManager_Model_Priceupdate::UPDATE_ACTION_TYPE_BY_FIXED   => $helper->__('Fixed amount'),
+                    Magecom_PriceUpdateManager_Model_Priceupdate::UPDATE_ACTION_TYPE_BY_PERCENT => $helper->__('Percent'),
+                    Magecom_PriceUpdateManager_Model_Priceupdate::UPDATE_ACTION_TYPE_BY_FIXED   => $helper->__('Flat amount'),
                 ),
                 'value'     => Magecom_PriceUpdateManager_Model_Priceupdate::UPDATE_ACTION_TYPE_BY_FIXED,
                 'onchange'  => 'PriceUpdater.updateRateClass(this.value);'

@@ -37,7 +37,7 @@
                     <catalog>
                         <children>
                             <priceupdatemanager translate="title">
-                                <title>Price update manager</title>
+                                <title>Mass Price Update</title>
                             </priceupdatemanager>
                         </children>
                     </catalog>
@@ -46,7 +46,7 @@
                             <config>
                                 <children>
                                     <magecom_priceupdatemanager translate="title" module="priceupdatemanager">
-                                        <title>Price updater settings</title>
+                                        <title>Mass Price Update</title>
                                         <sort_order>100</sort_order>
                                     </magecom_priceupdatemanager>
                                 </children>
@@ -54,7 +54,7 @@
                         </children>
                     </system>
                     <Magecom_PriceUpdateManager>
-                        <title>Price update manager</title>
+                        <title>Mass Price Update</title>
                         <sort_order>10</sort_order>
                     </Magecom_PriceUpdateManager>
                 </children>
