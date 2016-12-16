@@ -24,7 +24,7 @@
         <catalog>
             <children>
                 <priceupdatemanager translate="title" module="priceupdatemanager">
-                    <title>Price update manager</title>
+                    <title>Mass Price Update</title>
                     <action>adminhtml/priceupdate</action>
                 </priceupdatemanager>
             </children>
