@@ -32,10 +32,10 @@ class Magecom_PriceUpdateManager_Adminhtml_PriceupdateController extends Mage_Ad
      */
     public function indexAction()
     {
-        $this->_title($this->__('Catalog'))->_title($this->__('Price manager'));
+        $this->_title($this->__('Catalog'))->_title($this->__('Mass Price Update'));
         $this->loadLayout();
         $this->_setActiveMenu('catalog/priceupdatemanager');
-        $this->_addBreadcrumb(Mage::helper('priceupdatemanager')->__('Catalog'), Mage::helper('priceupdatemanager')->__('Price manager'));
+        $this->_addBreadcrumb(Mage::helper('priceupdatemanager')->__('Catalog'), Mage::helper('priceupdatemanager')->__('Mass Price Update'));
         $this->renderLayout();
     }
 
